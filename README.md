@@ -1,6 +1,5 @@
 
-### React-BootStrap
-使用React重构BootStrap
+### React例子[React例子[Jquery-BootStrap]
 
 ## 使用
 ```js
@@ -15,14 +14,17 @@ webpack-dev-server --content-base build --inline --hot
 npm run dev
 ```
 
-## loaders
-使用了如下一些loader
-* babel-loader<br/>
-	babel-loader需要babel-core,babel-preset-es2015使用react还需要babel-react
-* css-loader<br/>
-	可以require("*.css")
-* style-loader<br/>
-	添加style标签到html
-* url-loader<br/>
-	可以require(文件路径)
-* file-loader
+## 在React中使用Jquery,BootStrap
+Jquery通过ref来引用指定的DOM元素
+
+```
+//在绑定DOM元素之后设置
+componentDidMount(){
+	//引用指定DOM元素启用模态对话框
+	$(this.refs.root).modal({
+		backdrop:'static',
+		show:false,
+		keyboard:false
+	});
+}
+```
